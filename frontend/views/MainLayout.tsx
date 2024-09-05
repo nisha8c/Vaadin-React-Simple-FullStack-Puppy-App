@@ -26,6 +26,9 @@ export default function MainLayout() {
               <NavLink className={navLinkClasses} to="/puppies">
                   Puppies
               </NavLink>
+              <NavLink className={navLinkClasses} to="/rcsView">
+                  RCS
+              </NavLink>
           </nav>
         </header>
       </div>

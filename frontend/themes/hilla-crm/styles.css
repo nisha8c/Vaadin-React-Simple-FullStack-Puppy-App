@@ -1,0 +1,72 @@
+/*
+Radio-button span -start
+ */
+.span-for-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+
+    padding: 0;
+}
+
+.span-for-radio-group vaadin-radio-group::part(group-field) {
+    position: relative;
+    border: var(--lumo-primary-color-50pct) 1px solid;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 3.4px;
+}
+
+.span-for-radio-group vaadin-radio-button {
+    display: inline-block;
+    min-width: 50px;
+    /*padding: 5px; */
+    /*margin-right: 5px;*/
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--lumo-primary-color-50pct);
+
+}
+
+.span-for-radio-group vaadin-radio-group::part(label) {
+    margin-top: -6.5px;
+}
+
+.span-for-radio-group vaadin-radio-button::part(radio) {
+    display: none;
+}
+
+.span-for-radio-group vaadin-radio-button > label {
+    cursor: pointer;
+    padding: 4px 8px;
+
+}
+
+.span-for-radio-group vaadin-radio-button[checked] > label {
+    display: inline-block;
+    background-color: var(--lumo-primary-color-50pct);
+    color: var(--lumo-base-color);
+    border-radius: 4px;
+}
+
+@media (max-width: 351px) {
+    .span-for-radio-group {
+        min-width: 100%;
+    }
+    .span-for-radio-group vaadin-radio-button {
+        min-width: 100%;
+    }
+
+    .span-for-radio-group vaadin-radio-group::part(group-field) {
+        min-width: 100%;
+    }
+
+    .span-for-radio-group vaadin-radio-group {
+        min-width: 100%;
+    }
+}
+/*
+Radio-button span -end
+ */
