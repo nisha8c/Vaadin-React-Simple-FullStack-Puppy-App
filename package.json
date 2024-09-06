@@ -40,6 +40,7 @@
     "react": "^18.2.0",
     "react-ace": "^12.0.0",
     "react-dom": "^18.2.0",
+    "react-highlight.js": "^1.0.7",
     "react-router-dom": "^6.4.2",
     "react-simple-code-editor": "^0.14.1",
     "styled-components": "^6.1.13",
@@ -110,7 +111,8 @@
     "monaco-editor": "$monaco-editor",
     "ace-builds": "$ace-builds",
     "react-ace": "$react-ace",
-    "vite-plugin-monaco-editor": "$vite-plugin-monaco-editor"
+    "vite-plugin-monaco-editor": "$vite-plugin-monaco-editor",
+    "react-highlight.js": "$react-highlight.js"
   },
   "vaadin": {
     "dependencies": {
@@ -154,6 +156,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "88f1a01066b8042f0866bd772aa7e785c3df1f566cb73436c6706a46d8976685"
+    "hash": "2e63044825bc2d6207b86353e267314a037048ba25c03e15fc41adfd00046b12"
   }
 }

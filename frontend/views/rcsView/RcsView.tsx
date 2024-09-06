@@ -48,7 +48,7 @@ const RcsView = () => {
                     {selectedEditor === "codeEditor" && (
                         <VerticalLayout className={'code-editor-layout w-full h-full'}>
                             <div>Code Editor Content</div>
-                            <CodeEditor/>
+                            <CodeEditor></CodeEditor>
                         </VerticalLayout>
                     )}
                 </VerticalLayout>

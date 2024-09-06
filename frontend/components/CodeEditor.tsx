@@ -1,42 +1,33 @@
-import React, { useState } from 'react';
-import Editor from 'react-simple-code-editor';
-import Prism from 'prismjs';
-import 'prismjs/components/prism-jsx';
-import 'prismjs/themes/prism-dark.css'
+import {useEffect, useState} from "react";
+import hljs from "highlight.js/lib/core";
+import 'highlight.js/styles/atom-one-dark.css'
+import {VerticalLayout} from "@hilla/react-components/VerticalLayout";
 
-const CodeEditor: React.FC = () => {
-    const [code, setCode] = useState<string>('');
-
-    const highlight = (code: string) => Prism.highlight(code, Prism.languages.jsx, 'jsx');
-
-    const handlePaste = (event: React.ClipboardEvent) => {
-        event.preventDefault();
-        const text = event.clipboardData.getData('text/plain');
-        const sanitizedText = text.replace(/[\u200B-\u200D\uFEFF]/g, ''); // Remove zero-width characters
-        const target = event.currentTarget as HTMLTextAreaElement;
-        const newCode = code.slice(0, target.selectionStart) + sanitizedText + code.slice(target.selectionEnd);
-        setCode(newCode);
-    };
+const CodeEditor = () => {
+    const [code, setCode] = useState('');
 
     return (
-        <Editor
+        <VerticalLayout className={'w-full h-full'}>
+          <textarea
             value={code}
-            onValueChange={(code: string) => setCode(code)}
-            highlight={highlight}
-            padding={10}
-            onPaste={handlePaste}
-            autoFocus={true}
+            onChange={(event) => setCode(event.target.value)}
             style={{
-                fontFamily: '"Fira code", "Fira Mono", monospace',
-                fontSize: 16,
+                flex: 1,
                 width: '100%',
                 height: '100%',
-                backgroundColor: '#1e1e1e', // VS Code dark theme background color
-                color: '#d4d4d4', // VS Code dark theme text color
+                fontFamily: 'monospace',
+                fontSize: '16px',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                outline: 'none',
+                resize: 'none',
                 overflow: "auto",
-            }}
-        />
+                backgroundColor: '#1e1e1e', // VS Code dark theme background color
+                color: '#d4d4d4',
+              }}
+          />
+        </VerticalLayout>
     );
 };
-
 export default CodeEditor;
