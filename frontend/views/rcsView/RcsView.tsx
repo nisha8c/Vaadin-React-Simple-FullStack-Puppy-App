@@ -4,12 +4,8 @@ import MessageTypeAndAllTemplatesColumn from "Frontend/views/rcsView/MessageType
 import { RadioButton } from "@hilla/react-components/RadioButton";
 import { RadioGroup } from "@hilla/react-components/RadioGroup";
 import { useState } from "react";
+import CodeEditor from "Frontend/components/CodeEditor";
 
-import AceEditor from "react-ace";
-
-import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/theme-monokai";
-import "ace-builds/src-noconflict/ext-language_tools"
 
 const RcsView = () => {
     const [selectedEditor, setSelectedEditor] = useState("formEditor");
@@ -52,28 +48,7 @@ const RcsView = () => {
                     {selectedEditor === "codeEditor" && (
                         <VerticalLayout className={'code-editor-layout w-full h-full'}>
                             <div>Code Editor Content</div>
-                            <AceEditor
-                                mode="javascript"
-                                theme="monokai"
-                                value={code}
-                                onChange={setCode}
-                                name="code-editor"
-                                fontSize={14}
-                                lineHeight={19}
-                                width={'100%'}
-                                height={'100%'}
-                                showPrintMargin={true}
-                                showGutter={true}
-                                highlightActiveLine={true}
-                                editorProps={{ $blockScrolling: true }}
-                                setOptions={{
-                                    enableBasicAutocompletion: false,
-                                    enableLiveAutocompletion: false,
-                                    enableSnippets: false,
-                                    showLineNumbers: true,
-                                    tabSize: 2,
-                                }}
-                            />
+                            <CodeEditor/>
                         </VerticalLayout>
                     )}
                 </VerticalLayout>
