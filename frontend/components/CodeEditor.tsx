@@ -1,6 +1,4 @@
-import {useEffect, useState} from "react";
-import hljs from "highlight.js/lib/core";
-import 'highlight.js/styles/atom-one-dark.css'
+import {useState} from "react";
 import {VerticalLayout} from "@hilla/react-components/VerticalLayout";
 
 const CodeEditor = () => {
@@ -13,13 +11,13 @@ const CodeEditor = () => {
             onChange={(event) => setCode(event.target.value)}
             style={{
                 flex: 1,
-                width: '100%',
+                width: '98%',
                 height: '100%',
                 fontFamily: 'monospace',
                 fontSize: '16px',
                 padding: '10px',
                 border: '1px solid #ccc',
-                borderRadius: '4px',
+                borderRadius: '5px',
                 outline: 'none',
                 resize: 'none',
                 overflow: "auto",
