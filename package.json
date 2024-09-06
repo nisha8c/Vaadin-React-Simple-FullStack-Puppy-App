@@ -25,6 +25,7 @@
     "@monaco-editor/react": "^4.6.0",
     "@polymer/polymer": "3.5.1",
     "@types/prismjs": "^1.26.4",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@uiw/codemirror-theme-vscode": "^4.23.0",
     "@uiw/react-codemirror": "^4.23.0",
     "@vaadin/bundles": "24.3.0",
@@ -41,8 +42,10 @@
     "react-ace": "^12.0.0",
     "react-dom": "^18.2.0",
     "react-highlight.js": "^1.0.7",
+    "react-monaco-editor": "^0.56.1",
     "react-router-dom": "^6.4.2",
     "react-simple-code-editor": "^0.14.1",
+    "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^6.1.13",
     "vite-plugin-monaco-editor": "^1.1.0"
   },
@@ -112,7 +115,9 @@
     "ace-builds": "$ace-builds",
     "react-ace": "$react-ace",
     "vite-plugin-monaco-editor": "$vite-plugin-monaco-editor",
-    "react-highlight.js": "$react-highlight.js"
+    "react-highlight.js": "$react-highlight.js",
+    "@types/react-syntax-highlighter": "$@types/react-syntax-highlighter",
+    "react-syntax-highlighter": "$react-syntax-highlighter"
   },
   "vaadin": {
     "dependencies": {
@@ -156,6 +161,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "2e63044825bc2d6207b86353e267314a037048ba25c03e15fc41adfd00046b12"
+    "hash": "375b51516c2618e0eeddbbde23ad97cf4aaaa441ac858478ff4ff55dfbc7d2f6"
   }
 }
