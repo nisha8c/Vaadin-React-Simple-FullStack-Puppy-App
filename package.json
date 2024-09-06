@@ -22,22 +22,28 @@
     "@modjs/helpers": "^7.0.0",
     "@modjs/icons": "^7.0.0",
     "@modjs/utils": "^7.0.0",
+    "@monaco-editor/react": "^4.6.0",
     "@polymer/polymer": "3.5.1",
     "@types/prismjs": "^1.26.4",
+    "@uiw/codemirror-theme-vscode": "^4.23.0",
     "@uiw/react-codemirror": "^4.23.0",
     "@vaadin/bundles": "24.3.0",
     "@vaadin/common-frontend": "0.0.19",
     "@vaadin/router": "1.7.5",
+    "ace-builds": "^1.36.2",
     "classnames": "^2.3.2",
     "construct-style-sheets-polyfill": "3.1.0",
     "highlight.js": "^11.10.0",
     "lit": "3.1.0",
+    "monaco-editor": "^0.51.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
+    "react-ace": "^12.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "react-simple-code-editor": "^0.14.1",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "vite-plugin-monaco-editor": "^1.1.0"
   },
   "devDependencies": {
     "@lit-labs/react": "^1.1.0",
@@ -59,6 +65,9 @@
     "workbox-build": "7.0.0",
     "workbox-core": "7.0.0",
     "workbox-precaching": "7.0.0"
+  },
+  "scripts": {
+    "copy-ace": "mkdir -p frontend/public/ace-builds && cp -R node_modules/ace-builds/src-noconflict public/ace-builds"
   },
   "overrides": {
     "@vaadin/router": "$@vaadin/router",
@@ -94,7 +103,14 @@
     "styled-components": "$styled-components",
     "@types/prismjs": "$@types/prismjs",
     "prismjs": "$prismjs",
-    "react-simple-code-editor": "$react-simple-code-editor"
+    "react-simple-code-editor": "$react-simple-code-editor",
+    "@monaco-editor/react": "$@monaco-editor/react",
+    "@uiw/codemirror-theme-vscode": "$@uiw/codemirror-theme-vscode",
+    "@uiw/react-codemirror": "$@uiw/react-codemirror",
+    "monaco-editor": "$monaco-editor",
+    "ace-builds": "$ace-builds",
+    "react-ace": "$react-ace",
+    "vite-plugin-monaco-editor": "$vite-plugin-monaco-editor"
   },
   "vaadin": {
     "dependencies": {
@@ -138,6 +154,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "ba63852622501ad0677f9f76c20d6fad21dad5dfe98c33130604959071597793"
+    "hash": "88f1a01066b8042f0866bd772aa7e785c3df1f566cb73436c6706a46d8976685"
   }
 }

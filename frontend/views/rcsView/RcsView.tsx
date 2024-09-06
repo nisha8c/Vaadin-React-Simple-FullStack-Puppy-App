@@ -4,18 +4,31 @@ import MessageTypeAndAllTemplatesColumn from "Frontend/views/rcsView/MessageType
 import { RadioButton } from "@hilla/react-components/RadioButton";
 import { RadioGroup } from "@hilla/react-components/RadioGroup";
 import { useState } from "react";
-import Editor from "react-simple-code-editor";
-import Prism from "prismjs";
-import "prismjs/components/prism-core";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript"; // Ensure this is imported
-import 'prismjs/themes/prism-tomorrow.css';
+
+import AceEditor from "react-ace";
+
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/ext-language_tools"
 
 const RcsView = () => {
     const [selectedEditor, setSelectedEditor] = useState("formEditor");
     const [code, setCode] = useState(
-        `function add(a, b) {\n  return a + b;\n}`
+        `<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>`
     );
+
+
     return (
         <VerticalLayout className={'p-m w-full h-full'} theme={'spacing-xs'}>
             <HorizontalLayout className={'w-full h-full flex flex-wrap gap-x-m'}>
@@ -39,18 +52,26 @@ const RcsView = () => {
                     {selectedEditor === "codeEditor" && (
                         <VerticalLayout className={'code-editor-layout w-full h-full'}>
                             <div>Code Editor Content</div>
-                            <Editor
+                            <AceEditor
+                                mode="javascript"
+                                theme="monokai"
                                 value={code}
-                                onValueChange={code => setCode(code)}
-                                insertSpaces={true}
-                                highlight={code => Prism.highlight(code, Prism.languages.html, 'html')}
-                                padding={10}
-                                tabSize={2}
-                                autoFocus={true}
-                                style={{
-                                    fontFamily: '"Fira code", "Fira Mono", monospace',
-                                    fontSize: 14,
-                                    width: '100%',
+                                onChange={setCode}
+                                name="code-editor"
+                                fontSize={14}
+                                lineHeight={19}
+                                width={'100%'}
+                                height={'100%'}
+                                showPrintMargin={true}
+                                showGutter={true}
+                                highlightActiveLine={true}
+                                editorProps={{ $blockScrolling: true }}
+                                setOptions={{
+                                    enableBasicAutocompletion: false,
+                                    enableLiveAutocompletion: false,
+                                    enableSnippets: false,
+                                    showLineNumbers: true,
+                                    tabSize: 2,
                                 }}
                             />
                         </VerticalLayout>
