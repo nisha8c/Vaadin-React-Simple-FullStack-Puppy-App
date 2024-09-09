@@ -3,6 +3,8 @@
   "license": "UNLICENSED",
   "type": "module",
   "dependencies": {
+    "@babel/parser": "^7.25.6",
+    "@babel/traverse": "^7.25.6",
     "@hilla/form": "2.5.6",
     "@hilla/frontend": "2.5.6",
     "@hilla/generator-typescript-cli": "2.5.6",
@@ -37,6 +39,8 @@
     "highlight.js": "^11.10.0",
     "lit": "3.1.0",
     "monaco-editor": "^0.51.0",
+    "monaco-editor-webpack-plugin": "^7.1.0",
+    "monaco-jsx-highlighter": "^2.77.77",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-ace": "^12.0.0",
@@ -46,8 +50,7 @@
     "react-router-dom": "^6.4.2",
     "react-simple-code-editor": "^0.14.1",
     "react-syntax-highlighter": "^15.5.0",
-    "styled-components": "^6.1.13",
-    "vite-plugin-monaco-editor": "^1.1.0"
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@lit-labs/react": "^1.1.0",
@@ -66,6 +69,7 @@
     "typescript": "5.3.3",
     "vite": "5.0.6",
     "vite-plugin-checker": "0.6.2",
+    "vite-plugin-monaco-editor": "^1.1.0",
     "workbox-build": "7.0.0",
     "workbox-core": "7.0.0",
     "workbox-precaching": "7.0.0"
@@ -117,7 +121,12 @@
     "vite-plugin-monaco-editor": "$vite-plugin-monaco-editor",
     "react-highlight.js": "$react-highlight.js",
     "@types/react-syntax-highlighter": "$@types/react-syntax-highlighter",
-    "react-syntax-highlighter": "$react-syntax-highlighter"
+    "react-syntax-highlighter": "$react-syntax-highlighter",
+    "react-monaco-editor": "$react-monaco-editor",
+    "@babel/parser": "$@babel/parser",
+    "@babel/traverse": "$@babel/traverse",
+    "monaco-editor-webpack-plugin": "$monaco-editor-webpack-plugin",
+    "monaco-jsx-highlighter": "$monaco-jsx-highlighter"
   },
   "vaadin": {
     "dependencies": {
@@ -161,6 +170,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "375b51516c2618e0eeddbbde23ad97cf4aaaa441ac858478ff4ff55dfbc7d2f6"
+    "hash": "a05e05947a4d80850a3fb55a7191e14baa173b1d84cb97c8a0c99b54fd04d640"
   }
 }

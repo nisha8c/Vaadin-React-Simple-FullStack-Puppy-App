@@ -5,6 +5,8 @@ import { RadioButton } from "@hilla/react-components/RadioButton";
 import { RadioGroup } from "@hilla/react-components/RadioGroup";
 import { useState } from "react";
 import CodeEditor from "Frontend/components/CodeEditor";
+import TextMessageAutoForm from "Frontend/views/rcsView/Forms/TextMessageAutoForm";
+import ChoiceMessageAutoForm from "Frontend/views/rcsView/Forms/ChoiceMessageAutoForm";
 
 
 const RcsView = () => {
@@ -41,14 +43,14 @@ const RcsView = () => {
                         </RadioGroup>
                     </span>
                     {selectedEditor === "formEditor" && (
-                        <VerticalLayout className={'form-editor-layout'}>
-                            <div>Form Editor Content</div>
+                        <VerticalLayout className={'form-editor-layout w-full'}>
+                            <TextMessageAutoForm></TextMessageAutoForm>
                         </VerticalLayout>
                     )}
                     {selectedEditor === "codeEditor" && (
                         <VerticalLayout className={'code-editor-layout w-full h-full'}>
                             <div>Code Editor Content</div>
-                            <CodeEditor></CodeEditor>
+                            <CodeEditor code={code}></CodeEditor>
                         </VerticalLayout>
                     )}
                 </VerticalLayout>

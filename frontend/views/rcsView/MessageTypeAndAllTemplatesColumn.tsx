@@ -52,9 +52,9 @@ const MessageTypeAndAllTemplatesColumn = () => {
     }, []);
 
     // Type guard functions
-    const isTextMessage = (item: AllRCSMessages): item is TextMessage => 'content' in item;
+    const isTextMessage = (item: AllRCSMessages): item is TextMessage => 'textContent' in item;
     const isChoiceMessage = (item: AllRCSMessages): item is ChoiceMessage => 'question' in item;
-    const isMediaMessage = (item: AllRCSMessages): item is MediaMessage => 'url' in item;
+    const isMediaMessage = (item: AllRCSMessages): item is MediaMessage => 'mediaUrl' in item;
     const isCardMessage = (item: AllRCSMessages): item is CardMessage => 'title' in item;
     const isCarouselMessage = (item: AllRCSMessages): item is CarouselMessage => 'title' in item;
     const isLocationMessage = (item: AllRCSMessages): item is LocationMessage => 'address' in item;
