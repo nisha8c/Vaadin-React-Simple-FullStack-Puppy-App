@@ -7,6 +7,7 @@ import {TextField} from "@hilla/react-components/TextField";
 import ChoiceMessageModel from "Frontend/generated/com/example/application/data/rcsTemplate/ChoiceMessageModel";
 import ChoiceMessage from "Frontend/generated/com/example/application/data/rcsTemplate/ChoiceMessage";
 import React from "react";
+import {Button} from "@hilla/react-components/Button";
 
 const ChoiceMessageAutoForm = () => {
     const GroupingLayoutRenderer = ({ children, form }: AutoFormLayoutRendererProps<ChoiceMessageModel>) => {
@@ -30,6 +31,7 @@ const ChoiceMessageAutoForm = () => {
                         event.stopPropagation();
                     }}
                 ></TextArea>
+                <Button></Button>
             </VerticalLayout>
         );
 

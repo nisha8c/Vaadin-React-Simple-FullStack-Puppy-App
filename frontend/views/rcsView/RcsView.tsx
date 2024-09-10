@@ -28,8 +28,8 @@ const RcsView = () => {
 
 
     return (
-        <VerticalLayout className={'p-m w-full h-full'} theme={'spacing-xs'}>
-            <HorizontalLayout className={'w-full h-full flex flex-wrap gap-x-m'}>
+        <VerticalLayout className={'p-m w-full h-full'}>
+            <HorizontalLayout className={'rcs-three-columns w-full h-full flex gap-x-xs'}>
                 <MessageTypeAndAllTemplatesColumn />
                 <VerticalLayout theme={'spacing-xs'} className={'flex-grow p-m bg-contrast-5 rounded-s h-full'}>
                     <span className={'span-for-radio-group'}>

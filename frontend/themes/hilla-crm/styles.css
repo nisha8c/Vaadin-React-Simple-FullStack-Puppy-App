@@ -71,3 +71,191 @@ Radio-button span -start
 /*
 Radio-button span -end
  */
+
+
+/* RCS view css from acribon -start */
+.rcs-three-columns {
+
+}
+
+.rcs-three-columns > vaadin-vertical-layout {
+    flex: 1;
+}
+
+.rcs-three-columns > vaadin-vertical-layout:nth-child(2) {
+    flex: 2;
+    margin: 0 10px;
+}
+.rcs-three-columns > vaadin-vertical-layout:first-child {
+    margin-left: 0;
+}
+
+.rcs-three-columns > vaadin-vertical-layout:last-child {
+    margin-right: 0;
+}
+
+.rcs-three-columns .rcs-message-type-selection-container,
+.rcs-three-columns .rcs-all-templates-container,
+.rcs-three-columns .rcs-message-second-column-choose-editor-container,
+.rcs-three-columns .rcs-message-second-column-card-editor-section,
+.rcs-three-columns .rcs-message-preview-container,
+.rcs-three-columns .rcs-message-code-editor-container {
+    width: 100%;
+    height: auto;
+    background-color: #FAFAFA; /* needs to be changed with variable */
+    border-radius: var(--lumo-border-radius-m);
+}
+
+.rcs-three-columns .container-label {
+    width: 100%;
+    text-align: start;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 540;
+    line-height: 23px;
+    color: var(--lumo-primary-color);
+}
+
+.rcs-message-type-selection-container .message-type-button {
+    width: 110px;
+    height: auto;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--lumo-contrast-30pct);
+    color: var(--lumo-base-color);
+    font-size: 1em;
+    gap: 4px;
+}
+
+.rcs-message-type-selection-container .message-type-button:hover {
+    border-color: #96928e;
+    cursor: pointer;
+}
+
+.message-type-button:hover .button-label,
+.message-type-button:hover .rcs-type-button-icon {
+    color: #5e574b;
+}
+
+.message-type-button[selected] {
+    border-color: #96928e;
+    border-bottom: 2px solid #063560;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-type-button[selected] .button-label,
+.message-type-button[selected] .rcs-type-button-icon {
+    color: #5e574b;
+}
+
+.rcs-message-type-selection-container .button-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #9C9181;
+    font-size: 16px;
+    font-weight: 540;
+    line-height: 22px;
+    padding: var(--lumo-space-xs);
+}
+
+.message-type-button .rcs-type-button-icon {
+    width: 24px;
+    height: 24px;
+    color: #9C9181;
+}
+
+.rcs-all-templates-container, .rcs-message-second-column-card-editor-section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.rcs-all-templates-container vaadin-horizontal-layout {
+    display: flex;
+}
+
+.rcs-virtual-list-template-card:hover {
+    cursor: pointer;
+}
+
+.rcs-three-columns .rcs-virtual-list-template-card {
+    background-color: var(--lumo-base-color);
+    border-radius: 5px;
+}
+
+.rcs-three-columns .rcs-virtual-list-template-card .template-card-title {
+    font-weight: 400;
+    font-size: 14px;
+    /* color: var(--theme-dark-color); */
+}
+
+.rcs-three-columns .rcs-virtual-list-template-card .template-card-type {
+    font-weight: 480;
+    font-size: 12px;
+   /* color: var(--theme-dark-color); */
+}
+
+.rcs-three-columns .rcs-virtual-list-template-card .template-card-content-text {
+    font-weight: 400;
+    font-size: 14px;
+    height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+
+.rcs-three-columns .hidden-rcs-template-search-textarea {
+    display: none;
+}
+
+.rcs-three-columns .rcs-message-preview-mode-options {
+
+}
+
+.rcs-three-columns .rcs-message-preview-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 500px;
+    min-width: 300px;
+    width: 100%;
+    border: 6px solid #E0DCD7;
+    border-radius: var(--lumo-border-radius-m);
+    padding: var(--lumo-space-m);
+    margin-right: 50px;
+}
+
+.rcs-message-preview-box .rcs-preview-intro-icon {
+    font-size: 50px;
+    margin: 8px 8px 15px;
+}
+
+.rcs-three-columns .rcs-message-card-number-field::part(increase-button),
+.rcs-three-columns .rcs-message-card-number-field::part(decrease-button) {
+    /* background: rgba(18, 16, 15, 0.10);
+    color: var(--theme-dark-color);
+     */
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--lumo-space-m);
+}
+
+.button-container .message-type-button {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust the width of each button */
+    box-sizing: border-box;
+    max-width: calc(33.333% - 15px); /* Ensure the buttons don't exceed the container width */
+    background-color: var(--lumo-base-color);
+}
+
+
+
+/* RCS view css from acribon -end */
